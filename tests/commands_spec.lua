@@ -10,7 +10,7 @@ describe("Command Setup", function()
   after_each(function()
     -- Only delete commands created by copilot_cli
     local commands_to_delete = {
-      "Copilot",
+      "CopilotCli",
       "CopilotHealth",
       "CopilotTerminalToggle",
       "CopilotTerminalSend",

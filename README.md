@@ -48,7 +48,7 @@ Using lazy.nvim:
 ```lua
 {
     "KostkaBrukowa/copilot-cli.nvim",
-    cmd = "Copilot",
+    cmd = "CopilotCli",
     -- Example key mappings for common actions:
     keys = {
       { "<leader>a/", "<cmd>Copilot toggle<cr>", desc = "Toggle Copilot CLI" },
@@ -62,16 +62,16 @@ Using lazy.nvim:
   }
 ```
 
-After installing, run `:Copilot health` to check if everything is set up correctly.
+After installing, run `:CopilotCli health` to check if everything is set up correctly.
 
 ## ⚙️ Configuration
 
 There is no need to call setup if you don't want to change the default options.
 
-```lua
+```lua f
 require("copilot_cli").setup({
   -- Command that executes Copilot CLI
-  copilot_cmd = "copilot",
+  copilot_cmd = "copilotcli",
   -- Command line arguments passed to copilot CLI
   args = {
     -- Example: "--allow-all-tools" to auto-approve all tool usage (use with caution!)
@@ -88,7 +88,7 @@ require("copilot_cli").setup({
     gui = { nerdFontsVersion = "3" },
   },
   win = {
-    wo = { winbar = "Copilot" },
+    wo = { winbar = "CopilotCli" },
     style = "copilot_cli",
     position = "right",
   },

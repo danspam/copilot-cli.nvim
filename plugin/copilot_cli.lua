@@ -1,4 +1,4 @@
-vim.api.nvim_create_user_command("Copilot", function(opts)
+vim.api.nvim_create_user_command("CopilotCli", function(opts)
   local commands_menu = require("copilot_cli.commands_menu")
 
   if #opts.fargs == 0 then
@@ -18,21 +18,21 @@ end, {
       local main_cmd = parts[2]
       if cmds[main_cmd] and cmds[main_cmd].subcommands then
         return vim
-            .iter(vim.tbl_keys(cmds[main_cmd].subcommands))
-            :filter(function(key)
-              return key:find(arg_lead) == 1
-            end)
-            :totable()
+          .iter(vim.tbl_keys(cmds[main_cmd].subcommands))
+          :filter(function(key)
+            return key:find(arg_lead) == 1
+          end)
+          :totable()
       end
     end
 
     -- Complete main commands
     return vim
-        .iter(vim.tbl_keys(cmds))
-        :filter(function(key)
-          return key:find(arg_lead) == 1
-        end)
-        :totable()
+      .iter(vim.tbl_keys(cmds))
+      :filter(function(key)
+        return key:find(arg_lead) == 1
+      end)
+      :totable()
   end,
 })
 

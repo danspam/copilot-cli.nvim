@@ -8,14 +8,14 @@ local M = {}
 
 M.defaults = {
   auto_reload = false,
-  copilot_cmd = "copilot",
+  copilot_cmd = "copilotcli",
   args = {},
   config = {
     os = { editPreset = "nvim-remote" },
     gui = { nerdFontsVersion = "3" },
   },
   win = {
-    wo = { winbar = "Copilot" },
+    wo = { winbar = "CopilotCli" },
     style = "copilot_cli",
     position = "right",
   },
