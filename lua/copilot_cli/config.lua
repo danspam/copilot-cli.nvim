@@ -8,7 +8,7 @@ local M = {}
 
 M.defaults = {
   auto_reload = false,
-  copilot_cmd = "copilotcli",
+  copilot_cmd = "copilot",
   args = {},
   config = {
     os = { editPreset = "nvim-remote" },

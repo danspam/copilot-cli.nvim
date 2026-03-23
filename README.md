@@ -17,7 +17,7 @@
 
 ## 🎮 Commands
 
-- `:Copilot` - Open interactive command menu
+- `:CopilotCli` - Open interactive command menu
 
   ```text
   Commands:
@@ -30,9 +30,9 @@
 - ⚡ Direct command execution examples:
 
   ```vim
-  :Copilot health
-  :Copilot add_file
-  :Copilot ask "Fix login validation"
+  :CopilotCli health
+  :CopilotCli add_file
+  :CopilotCli ask "Fix login validation"
   ```
 
 ## 🔗 Requirements
@@ -71,7 +71,7 @@ There is no need to call setup if you don't want to change the default options.
 ```lua f
 require("copilot_cli").setup({
   -- Command that executes Copilot CLI
-  copilot_cmd = "copilotcli",
+  copilot_cmd = "copilot",
   -- Command line arguments passed to copilot CLI
   args = {
     -- Example: "--allow-all-tools" to auto-approve all tool usage (use with caution!)
